@@ -13,6 +13,11 @@ while (ans !== 'quit' && ans !== 'q') {
             console.log(`[${i}]: ${todos[i]}`);
         }
     }
+    else if (ans === 'new' || ans === 'n') {
+        let newTask = prompt("Enter your new task");
+        todos.push(newTask);
+        console.log(`Added task: ${newTask} to position [${todos.length - 1}]`);
+    }
     ans = prompt("What would you like to do?");
 }
 console.log ("OK fine you are a quitter");
